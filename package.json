@@ -1,0 +1,25 @@
+ (cd "$(git rev-parse --show-toplevel)" && git apply --3way <<'EOF' 
+diff --git a/package.json b/package.json
+index fc2a68f27a646889f9352593190f5cdca2aa3508..27b9d085924c317c429e259c3e98039e4222b1a5 100644
+--- a/package.json
++++ b/package.json
+@@ -1,12 +1,15 @@
+ {
+   "name": "repeat",
+   "version": "0.1.0",
+   "private": true,
+   "scripts": {
+     "start": "react-native start"
+   },
+   "dependencies": {
+     "react": "18.2.0",
+-    "react-native": "0.73.0"
++    "react-native": "0.73.0",
++    "@react-native-async-storage/async-storage": "^1.17.11",
++    "@react-native-google-signin/google-signin": "^8.0.0",
++    "@react-native-picker/picker": "^2.4.8"
+   }
+ }
+ 
+EOF
+)
